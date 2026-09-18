@@ -2,7 +2,7 @@
 
 set -e
 
-BASE_URL="https://raw.githubusercontent.com/USERNAME/REPO/main"
+BASE_URL="https://raw.githubusercontent.com/iMagee0x1/SKUYV5/main"
 
 echo "[+] Installing dependencies..."
 
