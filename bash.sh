@@ -4,10 +4,11 @@ set -e
 
 BASE_URL="https://raw.githubusercontent.com/iMagee0x1/SKUYV5/main"
 
-echo "[+] Installing dependencies..."
-
+echo "[+] Updating Termux..."
 pkg update -y
 pkg upgrade -y
+
+echo "[+] Installing dependencies..."
 pkg install -y \
     python \
     python-pip \
@@ -25,30 +26,26 @@ pkg install -y \
     curl
 
 echo "[+] Installing Python packages..."
-
 python -m pip install gmalg pycryptodome zstandard
 
 echo "[+] Installing Node packages..."
-
 npm install -g luamin luaparse
 
 echo "[+] Downloading SKUYV5..."
-
 rm -rf "$HOME/SKUYV5" "$HOME/SKUYV5.zip"
 
 curl -fL --retry 3 \
     -o "$HOME/SKUYV5.zip" \
     "$BASE_URL/SKUYV5.zip"
 
-echo "[+] Extracting..."
-
+echo "[+] Extracting SKUYV5..."
 mkdir -p "$HOME/SKUYV5"
 
 unzip -o \
     "$HOME/SKUYV5.zip" \
     -d "$HOME/SKUYV5"
 
-cd "$HOME/SKUYV5"
+cd "$HOME/SKUYV5/SKUYV5"
 
 echo "[+] Setting permissions..."
 
