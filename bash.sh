@@ -8,7 +8,7 @@ ZIP_FILE="$HOME/SKUYV5.zip"
 
 echo "[+] Updating package lists..."
 pkg update -y
-
+termux-change-repo
 echo "[+] Installing dependencies..."
 pkg install -y \
     python \
